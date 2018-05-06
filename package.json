@@ -1,7 +1,7 @@
 {
-  "name": "bitcore-p2p",
+  "name": "ravencore-p2p",
   "version": "1.1.2",
-  "description": "Interface to the bitcoin P2P network for bitcore",
+  "description": "Interface to the ravencoin P2P network for ravencore",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -48,21 +48,21 @@
     }
   ],
   "keywords": [
-    "bitcoin",
-    "bitcore"
+    "ravencoin",
+    "ravencore"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitpay/bitcore-p2p.git"
+    "url": "https://github.com/underdarkskies/ravencore-p2p.git"
   },
   "dependencies": {
-    "bitcore-lib": "^0.14",
+    "ravencore-lib": "underdarkskies/ravencore-lib",
     "bloom-filter": "^0.2.0",
-    "buffers": "bitpay/node-buffers#v0.1.2-bitpay",
+    "buffers": "underdarkskies/node-buffers#v0.1.2-underdarkskies",
     "socks5-client": "^0.3.6"
   },
   "devDependencies": {
-    "bitcore-build": "git://github.com/bitpay/bitcore-build.git",
+    "ravencore-build": "underdarkskies/ravencore-build",
     "brfs": "^1.2.0",
     "chai": "~1.10.0",
     "gulp": "^3.8.10",
