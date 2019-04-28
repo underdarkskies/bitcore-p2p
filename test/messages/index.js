@@ -163,7 +163,7 @@ describe('Messages', function() {
 
   describe('#parseBuffer', function() {
     it('fails with invalid command', function() {
-      var invalidCommand = 'f9beb4d96d616c6963696f757300000025000000bd5e830c' +
+      var invalidCommand = '5241564e6d616c6963696f757300000025000000bd5e830c' +
         '0102000000ec3995c1bf7269ff728818a65e53af00cbbee6b6eca8ac9ce7bc79d87' +
         '7041ed8';
       var fails = function() {
