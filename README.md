@@ -39,7 +39,6 @@ peer.on('tx', function(message) {
 });
 ```
 
-Take a look at the [bitcore guide](http://bitcore.io/guide/peer.html) on the usage of the `Peer` class.
 
 ## Contributing
 
@@ -48,3 +47,7 @@ See [CONTRIBUTING.md](https://github.com/underdarkskies/ravencore/blob/master/CO
 ## License
 
 Code released under [the MIT license](https://github.com/underdarkskies/ravencore/blob/master/LICENSE).
+
+Copyright 2018-2019 UnderDarkSkies
+
+Copyright 2013-2015 BitPay, Inc. 
