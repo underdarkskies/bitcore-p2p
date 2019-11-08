@@ -174,11 +174,16 @@ describe('Messages', function() {
     });
     
     it('ignores unsupported commands', function() {
-      var unsupportedCommand = '5241564e73656e64686561646572730025000000bd5e830c' +
+      var unsupportedCommand1 = '5241564e73656e64686561646572730025000000bd5e830c' +
         '0102000000ec3995c1bf7269ff728818a65e53af00cbbee6b6eca8ac9ce7bc79d87' +
         '7041ed8';
-        var ret1 = messages.parseBuffer(buildMessage(unsupportedCommand));
+      var unsupportedCommand2 = '5241564e73656e64636d70637400000025000000bd5e830c' +
+        '0102000000ec3995c1bf7269ff728818a65e53af00cbbee6b6eca8ac9ce7bc79d87' +
+        '7041ed8';
+      [unsupportedCommand1, unsupportedCommand2].forEach(function(unsupported) {
+        var ret1 = messages.parseBuffer(buildMessage(unsupported));
         should.not.exist(ret1);
+      });
     });
 
     it('ignores malformed messages', function() {
