@@ -2,7 +2,7 @@
 
 var chai = require('chai');
 
-/* jshint unused: false */
+/* eslint-disable no-unused-vars */
 var should = chai.should();
 var expect = chai.expect;
 
@@ -258,7 +258,7 @@ describe('Pool', function() {
       pool.on('peerconnect', function(peer, addr) {
         peer.relay.should.equal(relay);
         pool.disconnect();
-        if(++count == 2) {
+        if(++count === 2) {
           done();
         }
       });
@@ -302,6 +302,18 @@ describe('Pool', function() {
 
   it('send message to all peers', function(done) {
     var message = 'message';
+    var pool = new Pool({
+      network: Networks.livenet,
+      maxSize: 1,
+      dnsSeed: false,
+      addrs: [
+        {
+          ip:{
+            v4: 'localhost'
+          }
+        }
+      ]
+    });
     sinon.stub(Peer.prototype, 'connect', function() {
       this.socket = {
         destroy: sinon.stub()
@@ -317,18 +329,6 @@ describe('Pool', function() {
       Peer.prototype.sendMessage.restore();
       pool.disconnect();
       done();
-    });
-    var pool = new Pool({
-      network: Networks.livenet,
-      maxSize: 1,
-      dnsSeed: false,
-      addrs: [
-        {
-          ip:{
-            v4: 'localhost'
-          }
-        }
-      ]
     });
     pool.on('peerready', function() {
       pool.sendMessage(message);

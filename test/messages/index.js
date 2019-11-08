@@ -200,9 +200,10 @@ describe('Messages', function() {
         Block: ravencore.Block,
         Transaction: ravencore.Transaction
       });
-
+      /* eslint-disable no-unused-vars */
       var CustomMessage = function(arg, options) {
         this.arg = arg;
+      /* eslint-enable no-unused-vars */
       };
 
       messages.add('custom', 'Custom', CustomMessage);

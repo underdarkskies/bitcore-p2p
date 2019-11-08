@@ -1,5 +1,7 @@
 *.sw[a-z]
 coverage
+.nyc_output
+.idea
 node_modules
 
 npm-debug.log

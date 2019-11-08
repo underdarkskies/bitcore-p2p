@@ -1,3 +1,5 @@
+'use strict';
+/* eslint-env es6 */
 let Pool = require('ravencore-p2p').Pool;
 let BloomFilter = require('ravencore-p2p').BloomFilter;
 let NetworksData = require('ravencore-lib').Networks;

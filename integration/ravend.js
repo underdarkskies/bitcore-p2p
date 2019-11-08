@@ -2,7 +2,7 @@
 
 var chai = require('chai');
 
-/* jshint unused: false */
+/* eslint-disable no-unused-vars */
 var should = chai.should();
 var sinon = require('sinon');
 

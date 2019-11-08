@@ -207,7 +207,9 @@ describe('Peer', function() {
   it('should not send version on version if already sent', function(done) {
     var peer = new Peer({host:'localhost'});
     peer.versionSent = true;
+    /* eslint-disable no-unused-vars */
     var commands = {};
+    /* eslint-enable no-unused-vars */
     peer.sendMessage = function(message) {
       message.command.should.not.equal('version');
       done();

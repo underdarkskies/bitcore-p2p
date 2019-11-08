@@ -58,7 +58,9 @@ describe('BloomFilter', function() {
     // one bit different in first byte
     assert(!filter.contains(ParseHex('19108ad8ed9bb6274d3980bab5a85c048f0950c8')));
     filter.insert(ParseHex('b5a2c786d9ef4658287ced5914b37a1b4aa32eee'));
-    assert(filter.contains(ParseHex("b5a2c786d9ef4658287ced5914b37a1b4aa32eee")));
+    /*eslint-disable quotes*/
+    assert(filter.contains(ParseHex("b5a2c786d9ef4658287ced5914b37a1b4aa32eee"))); 
+    /*eslint-enable quotes*/
     filter.insert(ParseHex('b9300670b4c5366e95b2699e8b18bc75e5f729c5'));
     assert(filter.contains(ParseHex('b9300670b4c5366e95b2699e8b18bc75e5f729c5')));
 
@@ -68,21 +70,23 @@ describe('BloomFilter', function() {
     actual.should.deep.equal(expected);
   });
 
- it('deserialize a buffer', function() {
+  it('deserialize a buffer', function() {
 
-   var buffer = new Buffer('03614e9b050000000000000001', 'hex');
-   var filter = BloomFilter.fromBuffer(buffer);
+    var buffer = new Buffer('03614e9b050000000000000001', 'hex');
+    var filter = BloomFilter.fromBuffer(buffer);
 
-   assert(filter.contains(ParseHex('99108ad8ed9bb6274d3980bab5a85c048f0950c8')));
-   assert(!filter.contains(ParseHex('19108ad8ed9bb6274d3980bab5a85c048f0950c8')));
-   assert(filter.contains(ParseHex("b5a2c786d9ef4658287ced5914b37a1b4aa32eee")));
-   assert(filter.contains(ParseHex('b9300670b4c5366e95b2699e8b18bc75e5f729c5')));
- });
+    assert(filter.contains(ParseHex('99108ad8ed9bb6274d3980bab5a85c048f0950c8')));
+    assert(!filter.contains(ParseHex('19108ad8ed9bb6274d3980bab5a85c048f0950c8')));
+    /*eslint-disable quotes*/
+    assert(filter.contains(ParseHex("b5a2c786d9ef4658287ced5914b37a1b4aa32eee")));
+    /*eslint-enable quotes*/
+    assert(filter.contains(ParseHex('b9300670b4c5366e95b2699e8b18bc75e5f729c5')));
+  });
 
- it('#toBuffer and #fromBuffer round trip, with a large filter', function() {
-   var filter = BloomFilter.create(10000, 0.001);
-   var buffer = filter.toBuffer();
-   new BloomFilter.fromBuffer(buffer).should.deep.equal(filter);
- });
+  it('#toBuffer and #fromBuffer round trip, with a large filter', function() {
+    var filter = BloomFilter.create(10000, 0.001);
+    var buffer = filter.toBuffer();
+    new BloomFilter.fromBuffer(buffer).should.deep.equal(filter);
+  });
 
 });

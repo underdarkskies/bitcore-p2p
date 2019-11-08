@@ -5,10 +5,9 @@
   "author": "Under",
   "main": "index.js",
   "scripts": {
-    "lint": "gulp lint",
-    "test": "gulp test:node",
-    "coverage": "gulp coverage",
-    "build": "gulp"
+    "lint": "eslint .",
+    "test": "mocha",
+    "coverage": "nyc mocha"
   },
   "keywords": [
     "ravencoin",
@@ -25,11 +24,14 @@
     "socks5-client": "^1.2.8"
   },
   "devDependencies": {
-    "brfs": "^1.2.0",
+    "brfs": "^1.6.1",
     "chai": "~1.10.0",
-    "gulp": "^3.8.10",
-    "ravencore-build": "github:underdarkskies/ravencore-build",
-    "sinon": "^1.12.2"
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
+    "sinon": "^1.17.7"
   },
   "license": "MIT"
 }

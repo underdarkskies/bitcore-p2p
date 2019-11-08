@@ -1,5 +1,5 @@
 'use strict';
-
+/* eslint-disable no-unused-vars */
 var should = require('chai').should();
 var expect = require('chai').expect;
 var P2P = require('../../../');
