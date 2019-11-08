@@ -22,7 +22,7 @@
     "bloom-filter": "^0.2.0",
     "buffers": "github:underdarkskies/node-buffers",
     "ravencore-lib": "github:underdarkskies/ravencore-lib",
-    "socks5-client": "^0.3.6"
+    "socks5-client": "^1.2.8"
   },
   "devDependencies": {
     "brfs": "^1.2.0",
