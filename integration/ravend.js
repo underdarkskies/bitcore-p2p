@@ -26,16 +26,16 @@ var messages = new Messages({
   network: network
 });
 var blockHash = {
-  'livenet': '000000000000000013413cf2536b491bf0988f52e90c476ffeb701c8bfdb1db9',
-  'testnet': '0000000058cc069d964711cd25083c0a709f4df2b34c8ff9302ce71fe5b45786'
+  'livenet': '000000000001b004a3abc383ed81fdb2ce6d6f72f34a8888a80e325724ea8f4f',
+  'testnet': '000000015e649acb3b2abbf8ecbea831af5852ee7ef1a031b32492af64f743ac'
 };
 var stopBlock = {
-  'livenet': '00000000000000000b539ef570128acb953af3dbcfc19dd8e6066949672311a1',
-  'testnet': '00000000d0bc4271bcefaa7eb25000e345910ba16b91eb375cd944b68624de9f'
+  'livenet': '0000000000013c3233f58924530cee2140bcf2fec695988e18ce0aeb7a9b51c8',
+  'testnet': '0000000cc829f9a78613d0d9eb8c49be322242391a1c8b305a4ad26f46feee55'
 };
 var txHash = {
-  'livenet': '22231e8219a0617a0ded618b5dc713fdf9b0db8ebd5bb3322d3011a703119d3b',
-  'testnet': '22231e8219a0617a0ded618b5dc713fdf9b0db8ebd5bb3322d3011a703119d3b'
+  'livenet': '8f104a0c9745eb0161f54bca2cea753ac79191308c803c4fcfd8813e749de66a',
+  'testnet': 'd43a65843bce4fc59492bce49d77898e6d95a75eaed0e8f630062430936d3481'
 };
 
 // These tests require a running ravend instance
