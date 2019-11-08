@@ -172,6 +172,14 @@ describe('Messages', function() {
       };
       fails.should.throw('Unrecognized message command: malicious');
     });
+    
+    it('ignores unsupported commands', function() {
+      var unsupportedCommand = '5241564e73656e64686561646572730025000000bd5e830c' +
+        '0102000000ec3995c1bf7269ff728818a65e53af00cbbee6b6eca8ac9ce7bc79d87' +
+        '7041ed8';
+        var ret1 = messages.parseBuffer(buildMessage(unsupportedCommand));
+        should.not.exist(ret1);
+    });
 
     it('ignores malformed messages', function() {
       var malformed1 = 'd8c4c3d976657273696f6e000000000065000000fc970f1772110' +
