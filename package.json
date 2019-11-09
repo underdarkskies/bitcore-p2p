@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "bloom-filter": "^0.2.0",
-    "buffers": "github:underdarkskies/node-buffers",
+    "node-buffers": "github:underdarkskies/node-buffers",
     "ravencore-lib": "github:underdarkskies/ravencore-lib",
     "socks5-client": "^1.2.8"
   },
