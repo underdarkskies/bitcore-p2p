@@ -20,7 +20,7 @@ let pool = new Pool({network: NetworksData[network]});
 pool.connect();
 
 // Create a filter and a ravencoin message with the filter
-let filter = BloomFilter.create(1000, 0.1).insert(new Buffer(data.code, data.format));
+let filter = BloomFilter.create(1000, 0.1).insert(Buffer.from(data.code, data.format));
 let filterLoad = new Messages({network: NetworksData[network]}).FilterLoad(filter);
 
 // Create a ravencoin message for require a merkleblock
